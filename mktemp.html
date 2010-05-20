@@ -21,179 +21,208 @@
 	<meta name="text:Disqus Shortname" content="" />
 	<meta name="image:Header" content="" />
 	<meta name="image:Background" content="" />
-    
+	
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>{Title}{block:SearchPage}, Search results for: {SearchQuery}{/block:SearchPage}{block:PostSummary} - {PostSummary}{/block:PostSummary}</title>
-
+	
 	{block:Description}
-	<meta name="description" content="{MetaDescription}" />
+		<meta name="description" content="{MetaDescription}" />
 	{/block:Description}
-
+	
 	<link rel="shortcut icon" href="{Favicon}" />
 	<link rel="alternate" type="application/rss+xml" href="{RSS}" />
-
+	
 	<style type="text/css">
-	body {
-		background: {color:Background};
-		color: {color:Text};
-		font-family: {font:Body};
-		font-size: 12pt;
-		margin: 0;
-		padding: 0;
-	}
-	h1, h2 {
-		font-family: {font:Title};
-		font-weight: normal;
-	}
-	h1 {
-		font-size: 40pt;
-		letter-spacing: -4px;
-		margin: 0;
-		padding: 0;
-        line-height: 0.5;
-	}
-	h2 {
-		font-size: 18pt;
-		letter-spacing: -1px;
-	}
-	a {
-		text-decoration: none;
-		color: #900;
-	}
-	a:visited {
-		color: #600;
-	}
-    a:hover {
-        color: #c00;
-    }
-	h1 a, h1 a:visited, .text h2 a, .text h2 a:visited {
-		color: #000;
-	}
-    h1 a:hover, .text h2 a:hover, #about:hover {
-        color: #666;
-    }
-	blockquote {
-		border-left: 2px solid #ccc;
-		margin-left: 10px;
-		padding-left: 10px;
-	}
-	code {
-		font-size: 11pt;
-		font-family: "Droid Sans Mono", "Liberation Mono", Monaco, Consolas, "Bitstream Vera Sans Mono", monospace;
-		color: #000;
-	}
-	pre {
-		background: #f0f0f0;
-		padding: 10px;
-	}
-    #head {
-        text-align: right;
-        margin: 10px 0 40px 0;
-    }
-	#page {
-		width: 640px;
-		margin: 0 auto;
-		padding: 10px;
-	}
-    #about {
-        color: #ccc;
-    }
-	.post {
-		margin-bottom: 100px;
-	}
-	.text img {
-		border: 1px solid #ccc;
-		padding: 1px;
-	}
-    .link h2 {
-        color: #ccc;
-    }
-	.quote {
-		font-size: 18pt;
-        margin-bottom: 10px;
-	}
-    .quo-mark {
-        color: #ccc;
-        margin: 0 5px;
-    }
-    .question, .answer {
-        color: #ccc;
-        font-size: 18pt;
-    }
-	.notes {
-		font-size: 10pt;
-	}
-	.meta {
-		text-align: right;
-		font-size: 10pt;
-		border-bottom: 1px solid #ccc;
-	}
-	.tags {
-		font-size: 10pt;
-		text-align: right;
-		font-weight: bold;
-	}
-    .arrow {
-        font-size: 20pt;
-    }
-	#askme {
-		text-align: center;
-	}
+		body {
+			background: {color:Background};
+			color: {color:Text};
+			font-family: {font:Body};
+			font-size: 12pt;
+			margin: 0;
+			padding: 0;
+		}
+		
+		h1, h2 {
+			font-family: {font:Title};
+			font-weight: normal;
+		}
+		
+		h1 {
+			font-size: 40pt;
+			letter-spacing: -4px;
+			margin: 0;
+			padding: 0;
+			line-height: 0.5;
+		}
+		
+		h2 {
+			font-size: 18pt;
+			letter-spacing: -1px;
+		}
+		
+		a {
+			text-decoration: none;
+			color: #900;
+		}
+		
+		a:visited {
+			color: #600;
+		}
+		
+		a:hover {
+			color: #c00;
+		}
+		
+		h1 a, h1 a:visited, .text h2 a, .text h2 a:visited {
+			color: #000;
+		}
+
+		h1 a:hover, .text h2 a:hover, #about:hover {
+			color: #666;
+		}
+
+		blockquote {
+			border-left: 2px solid #ccc;
+			margin-left: 10px;
+			padding-left: 10px;
+		}
+
+		code {
+			font-size: 11pt;
+			font-family: "Droid Sans Mono", "Liberation Mono", Monaco, Consolas, "Bitstream Vera Sans Mono", monospace;
+			color: #000;
+		}
+
+		pre {
+			background: #f0f0f0;
+			padding: 10px;
+		}
+
+		#head {
+			text-align: right;
+			margin: 10px 0 40px 0;
+		}
+
+		#page {
+			width: 640px;
+			margin: 0 auto;
+			padding: 10px;
+		}
+
+		#about {
+			color: #ccc;
+		}
+
+		.post {
+			margin-bottom: 100px;
+		}
+
+		.text img {
+			border: 1px solid #ccc;
+			padding: 1px;
+		}
+
+		.link h2 {
+			color: #ccc;
+		}
+
+		.quote {
+			font-size: 18pt;
+			margin-bottom: 10px;
+		}
+
+		.quo-mark {
+			color: #ccc;
+			margin: 0 5px;
+		}
+
+		.question, .answer {
+			color: #ccc;
+			font-size: 18pt;
+		}
+
+		.notes {
+			font-size: 10pt;
+		}
+
+		.meta {
+			text-align: right;
+			font-size: 10pt;
+			border-bottom: 1px solid #ccc;
+		}
+
+		.tags {
+			font-size: 10pt;
+			text-align: right;
+			font-weight: bold;
+		}
+
+		.arrow {
+			font-size: 20pt;
+		}
+
+		#askme {
+			text-align: center;
+		}
 	</style>
-    <style type="text/css">{CustomCSS}</style>
+	<style type="text/css">{CustomCSS}</style>
 </head>
 
 <body>
-<div id="page">
-    <div id="head">
-    	<h1><a id="about" title="manual... ehm about page" href="http://mktemp.tumblr.com/about">man</a> <a href="/">{Title}</a></h1>
-	    {block:Description}
-    	    <p id="description">{Description}</p>
-	    {/block:Description}
-    </div>
 
-    {block:HasPages}
-        {block:Pages}<a href="{URL}" class="page">{Label}</a>{/block:Pages}
-    {/block:HasPages}
+<div id="page">
+	<div id="head">
+		<h1>
+			<a id="about" title="manual... ehm about page" href="http://mktemp.tumblr.com/about">man</a> <a href="/">{Title}</a>
+		</h1>
+		{block:Description}
+		<p id="description">{Description}</p>
+		{/block:Description}
+	</div>
+
+	{block:HasPages}
+	{block:Pages}<a href="{URL}" class="page">{Label}</a>{/block:Pages}
+	{/block:HasPages}
 
 	{block:Posts}
-
 	<div class="post">
+
 		{block:Text}
 		<div class="text">
 			{block:Title}
-                <h2><a href="{Permalink}">{Title}</a></h2>
-            {/block:Title}
+			<h2><a href="{Permalink}">{Title}</a></h2>
+			{/block:Title}
 			{Body}
 		</div>
 		{/block:Text}
-
+		
 		{block:Photo}
-			<p>{LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag}</p>
-			{block:Caption}<p>{Caption}</p>{/block:Caption}
+		<p>{LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag}</p>
+		{block:Caption}<p>{Caption}</p>{/block:Caption}
 		{/block:Photo}
 		
 		{block:Link}
 		<div class="link">
-            <h2><a href="{URL}" {Target}>{Name}</a> external link</h2>
-    		{block:Description}
-    			{Description}
-    		{/block:Description}
-        </div>
+			<h2><a href="{URL}" {Target}>{Name}</a> external link</h2>
+			{block:Description}
+			{Description}
+			{/block:Description}
+		</div>
 		{/block:Link}
 
 		{block:Quote}
-			<div class="quote {Length}"><span class="quo-mark">«</span>{Quote}<span class="quo-mark">»</span></div>
-			{block:Source}{Source}{/block:Source}
+		<div class="quote {Length}">
+			<span class="quo-mark">«</span>{Quote}<span class="quo-mark">»</span>
+		</div>
+		{block:Source}{Source}{/block:Source}
 		{/block:Quote}
 
-        {block:Answer}
-            <span class="question">question</span>
-            <p>{Question} ({Asker})</p>
-            <span class="answer">answer</span>
-            {Answer}
-        {block:Answer}
-
+		{block:Answer}
+		<span class="question">question</span>
+		<p>{Question} ({Asker})</p>
+		<span class="answer">answer</span>
+		<p>{Answer}</p>
+		{block:Answer}
 
 {block:Video}
 {Video-500}
@@ -229,33 +258,33 @@
 
 
 <div class="meta">
-{block:Date}
-{block:Reblog}reblogged{/block:Reblog}
-{block:NotReblog}posted{/block:NotReblog}
-<a href="{Permalink}">{TimeAgo}</a>
-{block:Reblog}
-from <a href="{ReblogParentURL}">{ReblogParentName}</a>
-{block:RebloggedFromReblog}
-<!-- (originally from {ReblogRootName}) -->
-{/block:RebloggedFromReblog}
-{/block:Reblog}
-{block:NoteCount}
-{NoteCountWithLabel}
-{/block:NoteCount}
-{block:IfDisqusShortname}
-{block:NoteCount}
-{/block:NoteCount}
-<a href="{Permalink}#disqus_thread">view comments</a>
-{/block:IfDisqusShortname}
-{/block:Date}
+	{block:Date}
+	{block:Reblog}reblogged{/block:Reblog}
+	{block:NotReblog}posted{/block:NotReblog}
+	<a href="{Permalink}">{TimeAgo}</a>
+	{block:Reblog}
+	from <a href="{ReblogParentURL}">{ReblogParentName}</a>
+	{block:RebloggedFromReblog}
+	<!-- (originally from {ReblogRootName}) -->
+	{/block:RebloggedFromReblog}
+	{/block:Reblog}
+	{block:NoteCount}
+	{NoteCountWithLabel}
+	{/block:NoteCount}
+	{block:IfDisqusShortname}
+	{block:NoteCount}
+	{/block:NoteCount}
+	<a href="{Permalink}#disqus_thread">view comments</a>
+	{/block:IfDisqusShortname}
+	{/block:Date}
 </div>
                     
 {block:IfShowTags}
 {block:HasTags}
 <div class="tags">
-{block:Tags}
-<a href="{TagURL}">{Tag}</a>
-{/block:Tags}
+	{block:Tags}
+	<a href="{TagURL}">{Tag}</a>
+	{/block:Tags}
 </div>
 {/block:HasTags}
 {/block:IfShowTags}
@@ -267,30 +296,43 @@ from <a href="{ReblogParentURL}">{ReblogParentName}</a>
 {/block:Permalink}
 {/block:IfDisqusShortname}
 
-	</div>
+</div>
 {/block:Posts}
 
 {block:PermalinkPagination}
-    {block:PreviousPost}
-        <div class="arrow" style="float: left"><a title="previous post" href="{PreviousPost}">&larr;</a></div>
-    {/block:PreviousPost}
-    {block:NextPost}
-        <div class="arrow" style="float: right"><a title="next post" href="{NextPost}">&rarr;</a></div>
-    {/block:NextPost}
-    <div style="clear: both"></div>
+{block:PreviousPost}
+<div class="arrow" style="float: left">
+	<a title="previous post" href="{PreviousPost}">&larr;</a>
+</div>
+{/block:PreviousPost}
+{block:NextPost}
+<div class="arrow" style="float: right">
+	<a title="next post" href="{NextPost}">&rarr;</a>
+</div>
+{/block:NextPost}
+<div style="clear: both"></div>
 {/block:PermalinkPagination}
 
 {block:Pagination}
-    {block:PreviousPage}
-        <div class="arrow" style="float: right"><a href="{PreviousPage}">&rarr;</a></div>
-    {/block:PreviousPage}
-    {block:NextPage}
-        <div class="arrow" style="float: left"><a href="{NextPage}">&larr;</a></div>
-    {/block:NextPage}
-    <div style="clear: both"></div>
+{block:PreviousPage}
+<div class="arrow" style="float: right">
+	<a href="{PreviousPage}">&rarr;</a>
+</div>
+{/block:PreviousPage}
+{block:NextPage}
+<div class="arrow" style="float: left">
+	<a href="{NextPage}">&larr;</a>
+</div>
+{/block:NextPage}
+<div style="clear: both"></div>
 {/block:Pagination}
 
-{block:AskEnabled}<div id="askme"><a href="/ask">{AskLabel}</a></div>{/block:AskEnabled}
+{block:AskEnabled}
+<div id="askme">
+	<a href="/ask">{AskLabel}</a>
+</div>
+{/block:AskEnabled}
+
 </div>            
               
 {block:SubmissionsEnabled}<a href="/submit" class="page">{SubmitLabel}</a>{/block:SubmissionsEnabled}
@@ -326,7 +368,7 @@ from <a href="{ReblogParentURL}">{ReblogParentName}</a>
 	})();
 //]]>
 </script>
+
 {/block:IfDisqusShortname}
 </body>
 </html>
-
