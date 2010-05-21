@@ -12,6 +12,14 @@
 	<!-- DEFAULT VARIABLES -->
 	<meta name="color:Background" content="#ffffff" />
 	<meta name="color:Text" content="#333333" />
+	<meta name="color:Header" content="#000000" />
+	<meta name="color:HeaderHover" content="#666666" />
+	<meta name="color:CodeText" content="#000000" />
+	<meta name="color:CodeBackground" content="#f0f0f0" />
+	<meta name="color:Highlight" content="#cccccc" />
+	<meta name="color:Link" content="#990000" />
+	<meta name="color:LinkHover" content="#cc0000" />
+	<meta name="color:LinkVisited" content="#660000" />
 	<meta name="font:Title" content="Arial" />
 	<meta name="font:Body" content="Arial" />
 	<meta name="font:Accent" content="Lucida Sans" />
@@ -62,27 +70,27 @@
 		
 		a {
 			text-decoration: none;
-			color: #900;
+			color: {color:Link};
 		}
 		
 		a:visited {
-			color: #600;
+			color: {color:LinkVisited};
 		}
 		
 		a:hover {
-			color: #c00;
+			color: {color:LinkHover};
 		}
 		
 		h1 a, h1 a:visited, .text h2 a, .text h2 a:visited {
-			color: #000;
+			color: {color:Header};
 		}
 
 		h1 a:hover, .text h2 a:hover, #about:hover {
-			color: #666;
+			color: {color:HeaderHover};
 		}
 
 		blockquote {
-			border-left: 2px solid #ccc;
+			border-left: 2px solid {color:Highlight};
 			margin-left: 10px;
 			padding-left: 10px;
 		}
@@ -90,11 +98,11 @@
 		code {
 			font-size: 11pt;
 			font-family: "Droid Sans Mono", "Liberation Mono", Monaco, Consolas, "Bitstream Vera Sans Mono", monospace;
-			color: #000;
+			color: {color:CodeText};
 		}
 
 		pre {
-			background: #f0f0f0;
+			background: {color:CodeBackground};
 			padding: 10px;
 		}
 
@@ -110,7 +118,7 @@
 		}
 
 		#about {
-			color: #ccc;
+			color: {color:Highlight};
 		}
 
 		.post {
@@ -118,12 +126,12 @@
 		}
 
 		.text img {
-			border: 1px solid #ccc;
+			border: 1px solid {color:Highlight};
 			padding: 1px;
 		}
 
 		.link h2 {
-			color: #ccc;
+			color: {color:Highlight};
 		}
 
 		.quote {
@@ -132,12 +140,12 @@
 		}
 
 		.quo-mark {
-			color: #ccc;
+			color: {color:Highlight};
 			margin: 0 5px;
 		}
 
 		.question, .answer {
-			color: #ccc;
+			color: {color:Highlight};
 			font-size: 18pt;
 		}
 
@@ -148,7 +156,7 @@
 		.meta {
 			text-align: right;
 			font-size: 10pt;
-			border-bottom: 1px solid #ccc;
+			border-bottom: 1px solid {color:Highlight};
 		}
 
 		.tags {
