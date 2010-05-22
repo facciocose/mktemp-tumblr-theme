@@ -22,7 +22,7 @@
 	<meta name="color:LinkVisited" content="#660000" />
 	<meta name="font:Title" content="Arial" />
 	<meta name="font:Body" content="Arial" />
-	<meta name="font:Accent" content="Lucida Sans" />
+	<meta name="font:Accent" content="Arial" />
 	<meta name="if:Show People I Follow" content="1" />
 	<meta name="if:Show Tags" content="1" />
 	<meta name="if:Show Album Art on Audio Posts" content="1" />
@@ -84,93 +84,111 @@
 		h1 a, h1 a:visited, .text h2 a, .text h2 a:visited {
 			color: {color:Header};
 		}
-
+		
 		h1 a:hover, .text h2 a:hover, #about:hover {
 			color: {color:HeaderHover};
 		}
-
+		
 		blockquote {
 			border-left: 2px solid {color:Highlight};
 			margin-left: 10px;
 			padding-left: 10px;
 		}
-
+		
 		code {
 			font-size: 11pt;
 			font-family: "Droid Sans Mono", "Liberation Mono", Monaco, Consolas, "Bitstream Vera Sans Mono", monospace;
 			color: {color:CodeText};
 		}
-
+		
 		pre {
 			background: {color:CodeBackground};
 			padding: 10px;
 		}
-
+		
 		#head {
 			text-align: right;
 			margin: 10px 0 40px 0;
 		}
-
+		
 		#page {
 			width: 640px;
 			margin: 0 auto;
 			padding: 10px;
 		}
-
+		
 		#about {
 			color: {color:Highlight};
 		}
-
+		
+		#footer {
+			text-align: right;
+		}
+		
 		.post {
 			margin-bottom: 100px;
 		}
-
+		
 		.text img {
 			border: 1px solid {color:Highlight};
 			padding: 1px;
 		}
-
+		
 		.link h2 {
 			color: {color:Highlight};
 		}
-
+		
 		.quote {
 			font-size: 18pt;
 			margin-bottom: 10px;
 		}
-
+		
 		.quo-mark {
 			color: {color:Highlight};
 			margin: 0 5px;
 		}
-
+		
 		.question, .answer {
 			color: {color:Highlight};
 			font-size: 18pt;
 		}
-
+		
 		.notes {
 			font-size: 10pt;
 		}
-
+		
 		.meta {
 			text-align: right;
 			font-size: 10pt;
 			border-bottom: 1px solid {color:Highlight};
 		}
-
+		
 		.tags {
 			font-size: 10pt;
 			text-align: right;
 			font-weight: bold;
 		}
-
+		
+		.photo-original {
+			font-size: 10pt;
+		}
+		
 		.arrow {
 			font-size: 20pt;
 		}
 
-		#askme {
-			text-align: center;
+		ol.notes {
+			margin: 5px;
+			padding: 0;
+		}
+		
+		ol.notes img.avatar {
+			display: none;
+		}
+
+		ol.notes li {
+			list-style-type: none;
+			margin: 5px 0;
 		}
 	</style>
 	<style type="text/css">{CustomCSS}</style>
@@ -205,8 +223,15 @@
 		{/block:Text}
 		
 		{block:Photo}
-		<p>{LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}" />{LinkCloseTag}</p>
-		{block:Caption}<p>{Caption}</p>{/block:Caption}
+		<div class="photo">
+			{LinkOpenTag}
+			<img src="{PhotoURL-500}" alt="{PhotoAlt}" />
+			{LinkCloseTag}
+			<div class="photo-original"><a href="{PhotoURL-HighRes}">original image</a></div>
+		</div>
+		{block:Caption}
+		<p>{Caption}</p>
+		{/block:Caption}
 		{/block:Photo}
 		
 		{block:Link}
@@ -335,11 +360,12 @@
 <div style="clear: both"></div>
 {/block:Pagination}
 
-{block:AskEnabled}
-<div id="askme">
-	<a href="/ask">{AskLabel}</a>
+<div id="footer">
+	{block:AskEnabled}
+	<a href="/ask">{AskLabel}</a> or
+	{/block:AskEnabled}
+	<a href="http://github.com/facciocose/mktemp-tumblr-theme">read the source</a>
 </div>
-{/block:AskEnabled}
 
 </div>            
               
