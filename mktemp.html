@@ -61,6 +61,7 @@
 			margin: 0;
 			padding: 0;
 			line-height: 0.5;
+			text-align: right;
 		}
 		
 		h2 {
@@ -85,7 +86,7 @@
 			color: {color:Header};
 		}
 		
-		h1 a:hover, .text h2 a:hover, #about:hover {
+		h1 a:hover, .text h2 a:hover, #about:hover, #random-post:hover {
 			color: {color:HeaderHover};
 		}
 		
@@ -107,18 +108,22 @@
 		}
 		
 		#head {
-			text-align: right;
 			margin: 10px 0 40px 0;
 		}
-		
+
 		#page {
 			width: 640px;
 			margin: 0 auto;
 			padding: 10px;
 		}
 		
-		#about {
+		#about, #random-post {
 			color: {color:Highlight};
+		}
+
+		#random-post {
+			display: block;
+			float: left;
 		}
 		
 		#footer {
@@ -190,6 +195,9 @@
 			list-style-type: none;
 			margin: 5px 0;
 		}
+		div.clear {
+			clear: both;
+		}
 	</style>
 	<style type="text/css">{CustomCSS}</style>
 </head>
@@ -198,12 +206,14 @@
 
 <div id="page">
 	<div id="head">
+		<a id="random-post" href="random">cat /dev/urandom<br></a>
 		<h1>
 			<a id="about" title="manual... ehm about page" href="http://mktemp.tumblr.com/about">man</a> <a href="/">{Title}</a>
 		</h1>
 		{block:Description}
 		<p id="description">{Description}</p>
 		{/block:Description}
+		<div class="clear"></div>
 	</div>
 
 	{block:HasPages}
