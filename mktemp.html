@@ -31,7 +31,7 @@
 	<meta name="image:Background" content="" />
 	
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>{Title}{block:SearchPage}, Search results for: {SearchQuery}{/block:SearchPage}{block:PostSummary} - {PostSummary}{/block:PostSummary}</title>
+	<title>{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}{block:SearchPage}, Search results for: {SearchQuery}{/block:SearchPage}</title>
 	
 	{block:Description}
 		<meta name="description" content="{MetaDescription}" />
@@ -163,10 +163,6 @@
 			font-size: 18pt;
 		}
 		
-		.notes {
-			font-size: 10pt;
-		}
-		
 		.meta {
 			text-align: right;
 			font-size: 10pt;
@@ -188,7 +184,9 @@
 		}
 
 		ol.notes {
-			margin: 5px;
+			font-size: 10pt;
+			border-top: 1px dashed {color:Highlight};
+			margin: 50px 0 5px 0;
 			padding: 0;
 		}
 		
@@ -198,7 +196,7 @@
 
 		ol.notes li {
 			list-style-type: none;
-			margin: 5px 0;
+			margin: 5px;
 		}
 		div.clear {
 			clear: both;
